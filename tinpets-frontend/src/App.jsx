@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import Swipe from "./Pages/Swipe"
+import Swipe from "./Pages/Swipe/Swipe"
 
 function App() {
 
