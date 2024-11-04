@@ -1,7 +1,7 @@
 // server/index.js
 
 const express = require('express');
-const connectDB = require('./config/database'); // Assure-toi que le chemin est correct
+const connectDB = require('./config/database'); 
 const proprietaireRoutes = require('./routes/proprietaireRoutes');
 const animalRoutes = require('./routes/animalRoutes');
 const matchRoutes = require('./routes/matchRoutes');
