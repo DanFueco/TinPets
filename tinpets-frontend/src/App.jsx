@@ -1,24 +1,28 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
-import Swipe from "./Pages/Swipe/Swipe"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Swipe from "./Pages/Swipe/Swipe";
+import Login from "./Pages/Swipe/Login";
 
 function App() {
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Swipe />,
+        },
+        {
+            path: "/login",
+            element: <Login />,
+        },
+    ]);
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Swipe/>
-    },
-  ])
-
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Header/>
-      <RouterProvider router={router}/>
-      <Footer/>
-    </div>
-  )
+    return (
+        <div className="flex flex-col min-h-screen">
+            <Header />
+            <RouterProvider router={router} />
+            <Footer />
+        </div>
+    );
 }
 
-export default App
+export default App;
