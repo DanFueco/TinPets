@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Swipe from "./Pages/Swipe/Swipe";
-import Login from "./Pages/Swipe/Login";
+import Login from "./Pages/Login";
 
 function App() {
     const router = createBrowserRouter([
