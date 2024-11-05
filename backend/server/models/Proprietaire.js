@@ -1,13 +1,27 @@
 // server/models/Proprietaire.js
 
-const mongoose = require('mongoose');
+const db = require('../config/db');
 
-const proprietaireSchema = new mongoose.Schema({
-    nom: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    motDePasse: { type: String, required: true }
-});
+const ProprietaireModel = {
+    findByEmail: (email, callback) => {
+        const query = 'SELECT * FROM Proprietaire WHERE email = ?';
+        db.query(query, [email], (err, results) => {
+            if (err) {
+                return callback(err, null);
+            }
+            callback(null, results[0]); // Retourne le premier résultat ou null si non trouvé
+        });
+    },
 
-const Proprietaire = mongoose.model('Proprietaire', proprietaireSchema);
+    createProprietaire: (nom, email, motDePasse, callback) => {
+        const query = 'INSERT INTO Proprietaire (nom, email, motDePasse) VALUES (?, ?, ?)';
+        db.query(query, [nom, email, motDePasse], (err, result) => {
+            if (err) {
+                return callback(err, null);
+            }
+            callback(null, result.insertId); // Retourne l'ID du propriétaire créé
+        });
+    }
+};
 
-module.exports = Proprietaire;
+module.exports = ProprietaireModel;
