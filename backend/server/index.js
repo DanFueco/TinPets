@@ -6,8 +6,9 @@ const proprietaireRoutes = require('./routes/proprietaireRoutes');
 const animalRoutes = require('./routes/animalRoutes');
 const matchRoutes = require('./routes/matchRoutes');
 const messageRoutes = require('./routes/messageRoutes');
-const filtreRoutes = require('./routes/filtreRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
+const filtreRoutes = require('./routes/filtreRoutes');
+const swipeRoutes = require('./routes/swipeRoutes');
 
 require('dotenv').config();
 
@@ -24,8 +25,9 @@ app.use('/api/proprietaires', proprietaireRoutes);
 app.use('/api/animaux', animalRoutes);
 app.use('/api/matchs', matchRoutes);
 app.use('/api/messages', messageRoutes);
-app.use('/api/filtres', filtreRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/filtres', filtreRoutes);
+app.use('/swipe', swipeRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3001;
