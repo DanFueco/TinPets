@@ -3,6 +3,7 @@
 ## Prérequis
 
 Avoir node et npm d'installé
+Avoir un serveur de base de données MySQL
 
 ## Lancer le backend
 
@@ -33,3 +34,12 @@ sinon juste
 ```
 npm run dev
 ```
+
+
+## Configuration de la BDD
+
+Exécuter le fichier SQL create-database.sql dans votre instance MySQL pour créer la BDD.
+
+Modifiez la configuration de connexion à votre BDD dans le fichier TinPets/backend/server/config/db.js
+
+
