@@ -1,14 +1,16 @@
+// server/routes/proprietaireRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const proprietaireController = require('../controllers/proprietaireController');
 
-// Route pour créer un nouveau propriétaire
-router.post('/creer', proprietaireController.creerProprietaire);
+// Route de test de connexion (déjà existante)
+router.get('/test-connection', proprietaireController.testConnection);
 
-// Route pour la connexion d'un propriétaire
-router.post('/connexion', proprietaireController.seConnecter);
+// Route pour le signup
+router.post('/signup', proprietaireController.creerProprietaire);
 
-// Route pour obtenir la liste des propriétaires
-router.get('/obtenir', proprietaireController.obtenirProprietaires);
+// Route pour le login
+router.post('/login', proprietaireController.seConnecter);
 
 module.exports = router;
