@@ -20,6 +20,8 @@ const Signup = () => {
             alert(response.data.message); // Message de succès
             // Optionnel: réinitialiser le formulaire après une inscription réussie
             setFormData({ nom: '', email: '', motDePasse: '' });
+            // Rediriger vers la page d'accueil ou la page de profil
+            window.location.href = "/login"; // Redirige l'utilisateur après la connexion
         } catch (error) {
             // Affiche le message d'erreur s'il est disponible, sinon un message générique
             const errorMessage = error.response?.data?.message || 'Une erreur est survenue lors de l\'inscription.';

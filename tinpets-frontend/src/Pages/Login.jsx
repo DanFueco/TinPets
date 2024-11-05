@@ -21,7 +21,7 @@ const Login = () => {
             // Gérer la réponse (par exemple, stocker le token dans le local storage ou rediriger)
             console.log(response.data);
             // Rediriger vers la page d'accueil ou la page de profil
-            window.location.href = "/login"; // Redirige l'utilisateur après la connexion
+            window.location.href = "/"; // Redirige l'utilisateur après la connexion
         } catch (err) {
             // Gérer les erreurs lors de la connexion
             setError(err.response?.data?.message || 'Nom d\'utilisateur ou mot de passe incorrect.');

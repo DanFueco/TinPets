@@ -12,7 +12,7 @@ const messageRoutes = require('./routes/messageRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const filtreRoutes = require('./routes/filtreRoutes');
 const swipeRoutes = require('./routes/swipeRoutes');
-
+*/
 require('dotenv').config();
 
 const app = express();
@@ -30,7 +30,7 @@ app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/filtres', filtreRoutes);
 app.use('/swipe', swipeRoutes);
-
+*/
 // Démarrer le serveur
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
